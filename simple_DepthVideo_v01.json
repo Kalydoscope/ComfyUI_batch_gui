@@ -1,0 +1,110 @@
+{
+  "1": {
+    "inputs": {
+      "video_info": [
+        "4",
+        3
+      ]
+    },
+    "class_type": "VHS_VideoInfoLoaded",
+    "_meta": {
+      "title": "Video Info (Loaded) 🎥🅥🅗🅢"
+    }
+  },
+  "3": {
+    "inputs": {
+      "frames_per_batch": 17,
+      "count": 97
+    },
+    "class_type": "VHS_BatchManager",
+    "_meta": {
+      "title": "Meta Batch Manager 🎥🅥🅗🅢"
+    }
+  },
+  "4": {
+    "inputs": {
+      "video": "test.mp4",
+      "force_rate": 0,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "LTXV",
+      "meta_batch": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VHS_LoadVideoPath",
+    "_meta": {
+      "title": "Load Video (Path) 🎥🅥🅗🅢"
+    }
+  },
+  "5": {
+    "inputs": {
+      "frame_rate": [
+        "1",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "EV\\Video\\Upres\\Depth\\test.mp4\\Depth_",
+      "format": "video/16bit-png",
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "8",
+        0
+      ],
+      "meta_batch": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "6": {
+    "inputs": {
+      "input_size": 518,
+      "max_res": 1440,
+      "precision": "fp16",
+      "vda_model": [
+        "7",
+        0
+      ],
+      "images": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VideoDepthAnythingProcess",
+    "_meta": {
+      "title": "Video Depth Anything Process"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model": "video_depth_anything_vitl.pth"
+    },
+    "class_type": "LoadVideoDepthAnythingModel",
+    "_meta": {
+      "title": "Load Video Depth Anything Model"
+    }
+  },
+  "8": {
+    "inputs": {
+      "colormap": "gray",
+      "depths": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "VideoDepthAnythingOutput",
+    "_meta": {
+      "title": "Video Depth Anything Output Depth Map"
+    }
+  }
+}
