@@ -34,6 +34,11 @@ A GUI tool to batch process ComfyUI workflows on a folder of inputs.
 3. In the GUI, select your workflow JSON file and input directory
 
 4. Configure patches to modify the workflow: Use **NODE ID** and **FIELD NAME**
+    - Patch the input nodes and video/ image field with the video_path to iterate through the input folder.
+    - Patch the output node's file prefix with different permutations:
+        - OutputDir/ PrefixStem (preferred for videos), where stem `filename` in `path/filename.mp4` input file.
+        - Output/ Stem/ PrefixStem (preferred for image sequences)
+    - You can add more patch fields if needed.
 
 5. Click "Start Batch Processing" to begin
 
