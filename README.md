@@ -24,16 +24,18 @@ A GUI tool to batch process ComfyUI workflows on a folder of inputs.
 2. Clone or download this repository
 
 ### Running the Tool
-1. Run the script:
+1. Have your comfyUI running. 
+
+2. Run the script:
    ```bash
    python comfyUI_batch_gui.py
    ```
 
-2. In the GUI, select your workflow JSON file and input directory
+3. In the GUI, select your workflow JSON file and input directory
 
-3. Configure patches to modify the workflow for each input file
+4. Configure patches to modify the workflow: Use **NODE ID** and **FIELD NAME**
 
-4. Click "Start Batch Processing" to begin
+5. Click "Start Batch Processing" to begin
 
 ### Configuration Options
 - **Workflow Path**: Select the ComfyUI workflow template (JSON format)
