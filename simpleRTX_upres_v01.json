@@ -1,0 +1,89 @@
+{
+  "1": {
+    "inputs": {
+      "frame_rate": [
+        "5",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "EV\\Video\\Upres\\Up_Shot_03_SD_00035-audio.mp4",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "14",
+        0
+      ],
+      "meta_batch": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "5": {
+    "inputs": {
+      "video_info": [
+        "51",
+        3
+      ]
+    },
+    "class_type": "VHS_VideoInfoLoaded",
+    "_meta": {
+      "title": "Video Info (Loaded) 🎥🅥🅗🅢"
+    }
+  },
+  "14": {
+    "inputs": {
+      "resize_type": "target dimensions",
+      "resize_type.width": 2560,
+      "resize_type.height": 1440,
+      "quality": "ULTRA",
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "RTXVideoSuperResolution",
+    "_meta": {
+      "title": "RTX Video Super Resolution"
+    }
+  },
+  "41": {
+    "inputs": {
+      "frames_per_batch": 17,
+      "count": 88
+    },
+    "class_type": "VHS_BatchManager",
+    "_meta": {
+      "title": "Meta Batch Manager 🎥🅥🅗🅢"
+    }
+  },
+  "51": {
+    "inputs": {
+      "video": "",
+      "force_rate": 0,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "LTXV",
+      "meta_batch": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "VHS_LoadVideoPath",
+    "_meta": {
+      "title": "Load Video (Path) 🎥🅥🅗🅢"
+    }
+  }
+}
